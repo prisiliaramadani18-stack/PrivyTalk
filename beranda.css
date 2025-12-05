@@ -162,98 +162,36 @@ header {
   height: 26px;
 }
 
-
-/* ---------------- FOOTER SHAPE --------------- */
+/* ----- FOOTER SHAPE CLEAN ----- */
 .footer-shape {
   width: 100%;
+  background: #a4d5ff;
+  padding: 0;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
-  gap: 0;
-  margin-top: 50px;
-  padding-bottom: 20px;
-  position: relative;
+  align-items: end;
+  gap: 6px;
+  height: 90px; /* Tinggi footer */
 }
 
 .shape {
-  width: 80px;
-  height: 120px;
+  width: 45px;
+  height: 70px;
   background: linear-gradient(to top, #69aee9, #b5dcf7);
-  border-radius: 50px 50px 0 0;
+  border-radius: 40px 40px 0 0;
 }
 
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-shape {
-  margin-top: auto; /* => ini yang bikin dia turun ke bawah */
-}
-
-/* ---------------- HP SIZE FIX --------------- */
+/* HP */
 @media (max-width: 480px) {
+  .footer-shape {
+    height: 70px;
+    margin-top: 30px;
+  }
+
   .shape {
-    width: 60px;
-    height: 90px;
-  }
-}
-
-/* ---------------- HP SIZE FIX --------------- */
-@media (max-width: 480px) {
-
-  header {
-    padding: 18px 10px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-
-  .logo img {
-    width: 85px;
-  }
-
-  .text-wrap h1 {
-    font-size: 1.4rem;
-  }
-
-  .text-wrap p {
-    font-size: 0.85rem;
-  }
-
-
-  .sidebar {
-    width: 220px;
-    left: -220px;
-    padding: 15px;
-  }
-
-  .sidebar.active {
-    left: 0;
-  }
-
-  /* menu tombol */
-  .menu-container {
-    max-width: 300px;
-    gap: 15px;
-    margin: 25px auto;
-  }
-
-  .menu-btn {
-    font-size: 14px;
-    padding: 11px 13px;
-    gap: 12px;
-  }
-
-  .menu-btn img {
-    width: 22px;
-    height: 22px;
-  }
-
-  /* footer shape biar ga ketumpuk */
-  .shape {
-    width: 60px;
-    height: 90px;
+    width: 35px;
+    height: 55px;
   }
 }
 
