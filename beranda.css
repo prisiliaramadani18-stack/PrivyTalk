@@ -173,28 +173,6 @@ body {
   flex-direction: column;
 }
 
-/* ----- FOOTER SHAPE CLEAN ----- */
-.footer-shape {
-  position: fixed;
-  width: 50%;
-  background: #a4d5ff;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 6px;
-  height: 90px;
-
-  /* INI YANG BIKIN DIA NGUMPUL DI PALING BAWAH */
-  margin-top: auto;
-}
-
-.shape {
-  width: 45px;
-  height: 70px;
-  background: linear-gradient(to top, #69aee9, #b5dcf7);
-  border-radius: 40px 40px 0 0;
-}
 
 @media (max-width: 480px) {
   .footer-shape {
@@ -208,4 +186,19 @@ body {
 
 body{
   padding-bottom: 100px;
+}
+/* Bagian bawah dekorasi */
+.footer-shape {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 40px;
+}
+
+.shape {
+  width: 80px;
+  height: 120px; /* panjang semua */
+  background: linear-gradient(to top, #69aee9, #b5dcf7);
+  border-radius: 50px 50px 0 0;
+
 }
