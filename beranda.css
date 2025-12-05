@@ -114,10 +114,14 @@ header {
 
 
 .footer-shape {
-  width: 100%;
+  width: 50%;
+  height:70%
+  border-radius:40px 40px 0 0;
+  bacground: linear-gradient(to top, #69aee9, #b5dcf7)
+
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow: hidden;
   margin-top: 35px;
 }
@@ -158,4 +162,5 @@ header {
     height: 80px;
   }
 }
+
 
