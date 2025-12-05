@@ -162,17 +162,30 @@ header {
   height: 26px;
 }
 
+body {
+  background: #fdfdfd;
+  color: #333;
+  overflow-x: hidden;
+
+  /* WAJIB supaya footer turun */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ----- FOOTER SHAPE CLEAN ----- */
 .footer-shape {
   width: 100%;
   background: #a4d5ff;
   padding: 0;
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: end;
   gap: 6px;
-  height: 90px; /* Tinggi footer */
+  height: 90px;
+
+  /* INI YANG BIKIN DIA NGUMPUL DI PALING BAWAH */
+  margin-top: auto;
 }
 
 .shape {
@@ -182,16 +195,12 @@ header {
   border-radius: 40px 40px 0 0;
 }
 
-/* HP */
 @media (max-width: 480px) {
   .footer-shape {
     height: 70px;
-    margin-top: 30px;
   }
-
   .shape {
     width: 35px;
     height: 55px;
   }
 }
-
