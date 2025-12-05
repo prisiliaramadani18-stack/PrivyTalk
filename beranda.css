@@ -163,13 +163,15 @@ header {
 }
 
 
+/* ---------------- FOOTER SHAPE --------------- */
 .footer-shape {
-  margin-top: auto;   
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 0;
-  flex-wrap: nowrap;
-  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
 .shape {
@@ -177,6 +179,25 @@ header {
   height: 120px;
   background: linear-gradient(to top, #69aee9, #b5dcf7);
   border-radius: 50px 50px 0 0;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-shape {
+  margin-top: auto; /* => ini yang bikin dia turun ke bawah */
+}
+
+/* ---------------- HP SIZE FIX --------------- */
+@media (max-width: 480px) {
+  .shape {
+    width: 60px;
+    height: 90px;
+  }
 }
 
 /* ---------------- HP SIZE FIX --------------- */
@@ -235,3 +256,4 @@ header {
     height: 90px;
   }
 }
+
