@@ -187,18 +187,5 @@ body {
 body{
   padding-bottom: 100px;
 }
-/* Bagian bawah dekorasi */
-.footer-shape {
-  display: flex;
-  justify-content: center;
-  gap: 0px;
-  margin-top: 40px;
-}
 
-.shape {
-  width: 80px;
-  height: 120px; /* panjang semua */
-  background: linear-gradient(to top, #69aee9, #b5dcf7);
-  border-radius: 50px 50px 0 0;
 
-}
