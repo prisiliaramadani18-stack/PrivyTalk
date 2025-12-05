@@ -20,8 +20,8 @@ body {
 header {
   background: linear-gradient(to bottom, #6ea8d9, #bcd5eb);
   padding: 25px 15px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
   text-align: center;
   position: relative;
 }
@@ -187,5 +187,6 @@ body {
 body{
   padding-bottom: 100px;
 }
+
 
 
