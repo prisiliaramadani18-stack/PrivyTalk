@@ -1,0 +1,212 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to bottom, #6ea8d9, #bcd5eb);
+  padding: 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 26px;
+  color: rgb(254, 252, 252);
+  display: block; /* ubah dari none ke block biar keliatan */
+  z-index: 999; /* biar gak ketutupan elemen lain */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px; /* disembunyiin dulu */
+  width: 260px;
+  height: 100%;
+  background-color: #689bc8;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar.active {
+  left: 0; /* muncul dari kiri */
+}
+
+.sidebar .close-btn {
+  font-size: 26px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.sidebar .profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.sidebar .profile h3 {
+  margin: 10px 0 5px;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  margin: 15px 0;
+}
+
+.sidebar .menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+.sidebar .menu li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Container tombol */
+.menu-container {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu-btn {
+  width: 250px;
+  padding: 15px;
+  background: #f7f4f4;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #e9eef6;
+  transform: translateY(-3px);
+}
+
+.menu-btn img {
+  width: 24px;
+  height: 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;   /* atur ukuran lebar */
+  height: auto;  /* biar proporsional */
+  margin-right: 8px; /* jarak ke teks "PrivyTalk" */
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;        /* ilangin underline */
+  background: #fff;             /* warna tombol putih */
+  color: #333;                  /* warna teks hitam/abu */
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #e3f2fd;          /* biru muda pas hover */
+  transform: translateY(-2px);
+}
+
+/* Bagian bawah dekorasi */
+.footer-shape {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 40px;
+}
+
+.shape {
+  width: 80px;
+  height: 120px; /* panjang semua */
+  background: linear-gradient(to top, #69aee9, #b5dcf7);
+  border-radius: 50px 50px 0 0;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu-btn {
+    width: 200px;
+    padding: 12px;
+    font-size: 16px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}

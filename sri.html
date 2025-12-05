@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Mulyani</title>
+  <link rel="stylesheet" href="css/sri.css">
+</head>
+<body>
+  <div class="header">
+    <button onclick="window.location.href='konseling.html'">←</button>
+    <h2>Sri Mulyani, S.Pd (Offline)</h2>
+  </div>
+
+  <div class="chat-box" id="chatBox">
+    <!-- Pesan akan tampil di sini -->
+  </div>
+
+  <div class="input-area">
+    <button onclick="openEmoji()">😊</button>
+    <input type="text" id="messageInput" placeholder="Ketik Pesan">
+    <button onclick="sendMessage()">➤</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const text = input.value.trim();
+      if (text !== "") {
+        const chatBox = document.getElementById("chatBox");
+        const msg = document.createElement("div");
+        msg.classList.add("message", "sent");
+        msg.innerText = text;
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        input.value = "";
+      }
+    }
+
+    function openEmoji() {
+      const input = document.getElementById("messageInput");
+      input.value += "😊";
+      input.focus();
+    }
+  </script>
+</body>
+</html>

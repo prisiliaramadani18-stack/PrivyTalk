@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PrivyTalk</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Silahkan Login</h2>
+    <p class="subtitle">PrivyTalk</p>
+
+    <form id="loginForm" class="login-form">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="password">Kata Sandi</label>
+      <input type="password" id="password" name="password" placeholder="Kata Sandi" required>
+
+      <button type="submit" class="btn-masuk">Masuk</button>
+      <a href="#" class="forgot">Lupa Kata Sandi?</a>
+    </form>
+
+    <div class="or">OR</div>
+
+    <div class="google">
+      <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" width="40">
+    </div>
+
+    <a href="beranda.html" class="btn-next">SKIP</a>  
+  </div>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const user = document.getElementById("username").value.toLowerCase();
+    const pass = document.getElementById("password").value;
+
+    // fake data
+    if (user === "admin" && pass === "admin123") {
+      window.location.href = "admin.html";
+    } 
+    else if (user === "siswa" && pass === "siswa123") {
+      window.location.href = "beranda.html";
+    } 
+    else {
+      alert("username / password ");
+    }
+  });
+</script>
+
+</body>
+</html>

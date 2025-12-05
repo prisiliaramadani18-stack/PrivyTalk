@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #75aadb, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 320px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form label {
+  font-size: 14px;
+  color: #444;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn-masuk {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-masuk:hover {
+  background: #333;
+}
+
+.forgot {
+  font-size: 13px;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.or {
+  margin: 15px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.google {
+  margin-bottom: 15px;
+}
+
+.btn-next {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #75aadb;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-next:hover {
+  background: #4d8ec7;
+}
+
+/* SIDEBAR DEFAULT KETUTUP */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* sembunyi */
+  width: 260px;
+  height: 100%;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease; /* animasi mantap */
+  z-index: 999;
+}
+
+/* SAAT DIBUKA */
+.sidebar.active {
+  left: 0; /* geser dari kiri */
+}

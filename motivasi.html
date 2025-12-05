@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivasi</title>
+  <link rel="stylesheet" href="css/motivasi.css">
+</head>
+<body>
+  <div class="header">
+    <a href="beranda.html" class="back-btn">&lt;</a>
+    <h1>Motivasi</h1>
+  </div>
+
+  <div class="content" id="motivasi-list">
+    <div class="card">
+      <p class="title">Nafas dulu....</p>
+      <p class="text"><i>bertahan bukan berarti kuat setiap saat istirahat itu bagian dari proses.</i></p>
+
+      <div class="actions">
+        <span class="bookmark">🔖</span>
+        <span class="delete">❌</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="title">Satu Langkah</p>
+      <p class="text">Langkah kecil hari ini lebih berharga daripada niat besar yang tak dimulai.</p>
+
+      <div class="actions">
+        <span class="bookmark">🔖</span>
+        <span class="delete">❌</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="text">Kadang hidup terasa berat, tapi percayalah kamu lebih kuat dari yang kamu kira.</p>
+      <div class="actions">
+        <span class="bookmark">🔖</span>
+        <span class="delete">❌</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="text">Sekolah itu berat, tapi lebih berat lagi kalau nggak punya masa depan.</p>
+      <div class="actions">
+        <span class="bookmark">🔖</span>
+        <span class="delete">❌</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-box">
+    <input type="text" id="inputMotivasi" placeholder="Ketik Pesan">
+    <button class="send-btn" onclick="kirimMotivasi()">➤</button>
+  </div>
+
+  <script>
+    function kirimMotivasi() {
+      const input = document.getElementById("inputMotivasi");
+      const teks = input.value.trim();
+
+      if (teks !== "") {
+        const list = document.getElementById("motivasi-list");
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const p = document.createElement("p");
+        p.className = "text";
+        p.textContent = teks;
+
+        const actions = document.createElement("div");
+        actions.className = "actions";
+
+        const bookmark = document.createElement("span");
+        bookmark.className = "bookmark";
+        bookmark.textContent = "🔖";
+
+        const del = document.createElement("span");
+        del.className = "delete";
+        del.textContent = "❌";
+        del.onclick = () => card.remove();
+
+        actions.appendChild(bookmark);
+        actions.appendChild(del);
+
+        card.appendChild(p);
+        card.appendChild(actions);
+
+        list.insertBefore(card, list.firstChild);
+
+        input.value = "";
+      }
+    }
+
+    // bikin tombol hapus di card yang udah ada
+    document.querySelectorAll('.delete').forEach(btn => {
+      btn.onclick = () => btn.parentElement.parentElement.remove();
+    });
+  </script>
+</body>
+</html>
