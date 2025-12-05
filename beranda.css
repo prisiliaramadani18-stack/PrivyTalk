@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -13,43 +11,59 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
+/* ---------------- HEADER --------------- */
 header {
   background: linear-gradient(to bottom, #6ea8d9, #bcd5eb);
-  padding: 20px;
+  padding: 25px 15px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   text-align: center;
   position: relative;
 }
 
-header h1 {
-  font-size: 2rem;
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 110px;
+  height: auto;
+}
+
+.text-wrap h1 {
+  font-size: 1.9rem;
   font-weight: 700;
   color: #fff;
+  line-height: 1.2;
 }
 
-header p {
-  font-size: 0.9rem;
+.text-wrap p {
+  font-size: 0.95rem;
   color: #f1f1f1;
+  margin-top: 3px;
 }
 
-
+/* MENU TOGGLE */
 .menu-toggle {
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 25px;
   cursor: pointer;
-  font-size: 26px;
-  color: rgb(254, 252, 252);
-  display: block; /* ubah dari none ke block biar keliatan */
-  z-index: 999; /* biar gak ketutupan elemen lain */
+  font-size: 28px;
+  color: #fff;
+  z-index: 999;
+  display: block;
 }
 
+/* ---------------- SIDEBAR --------------- */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -280px; /* disembunyiin dulu */
+  left: -280px;
   width: 260px;
   height: 100%;
   background-color: #689bc8;
@@ -61,7 +75,7 @@ header p {
 }
 
 .sidebar.active {
-  left: 0; /* muncul dari kiri */
+  left: 0;
 }
 
 .sidebar .close-btn {
@@ -88,7 +102,6 @@ header p {
 
 .sidebar .menu {
   list-style: none;
-  padding: 0;
 }
 
 .sidebar .menu li {
@@ -106,11 +119,11 @@ header p {
   text-decoration: underline;
 }
 
-
-
-/* Container tombol */
+/* ---------------- MENU BUTTONS --------------- */
 .menu-container {
-  margin: 40px auto;
+  width: 100%;
+  max-width: 350px;
+  margin: 35px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -118,95 +131,61 @@ header p {
 }
 
 .menu-btn {
-  width: 250px;
+  width: 100%;
   padding: 15px;
-  background: #f7f4f4;
+  background: #fff;
   border: 2px solid #ddd;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 12px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
-  text-align: left;
   display: flex;
   align-items: center;
   gap: 15px;
-  box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
 }
 
 .menu-btn:hover {
-  background: #e9eef6;
+  background: #e3f2fd;
   transform: translateY(-3px);
 }
 
 .menu-btn img {
-  width: 24px;
-  height: 24px;
-}
-.logo {
-  display: flex;
-  align-items: center;
+  width: 26px;
+  height: 26px;
 }
 
-.logo img {
-  width: 120px;   /* atur ukuran lebar */
-  height: auto;  /* biar proporsional */
-  margin-right: 8px; /* jarak ke teks "PrivyTalk" */
-}
-
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 20px;
-}
-
-.menu-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;        /* ilangin underline */
-  background: #fff;             /* warna tombol putih */
-  color: #333;                  /* warna teks hitam/abu */
-  padding: 12px 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.menu-btn:hover {
-  background: #e3f2fd;          /* biru muda pas hover */
-  transform: translateY(-2px);
-}
-
-/* Bagian bawah dekorasi */
+/* ---------------- FOOTER SHAPE --------------- */
 .footer-shape {
   display: flex;
   justify-content: center;
   gap: 0px;
   margin-top: 40px;
+  flex-wrap: nowrap;
 }
 
 .shape {
   width: 80px;
-  height: 120px; /* panjang semua */
+  height: 120px;
   background: linear-gradient(to top, #69aee9, #b5dcf7);
   border-radius: 50px 50px 0 0;
 }
 
-/* Responsif untuk HP */
+/* ---------------- RESPONSIVE --------------- */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
+  .text-wrap h1 {
+    font-size: 1.6rem;
   }
 
   .menu-btn {
-    width: 200px;
-    padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
+    padding: 13px;
   }
+
   .menu-toggle {
-    display: none;
+    display: block !important;
   }
 }
