@@ -115,7 +115,6 @@ footer {
   }
 }
 
-
 /* Bagian bawah dekorasi */
 .footer-shape {
   display: flex;
@@ -130,3 +129,4 @@ footer {
   background: linear-gradient(to top, #69aee9, #b5dcf7);
   border-radius: 50px 50px 0 0;
 }
+
