@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PrivyTalk</title>
-  <link rel="stylesheet" href="beranda.css">
+  <link rel="stylesheet" href="css/beranda.css">
 </head>
 <body>
+
   <header>
     <div class="logo">
-  <img src="/img/logoPrivyTalk.png" alt="logo">
-  <div class="text-wrap">
-    <h1>Selamat Datang !!</h1>
-    <p>Ruang aman untuk curhat dan menemukan semangat baru</p>
-  </div>
-</div>
-
+      <img src="/img/logoPrivyTalk.png" alt="logo">
+      <div class="text-wrap">
+        <h1>Selamat Datang !!</h1>
+        <p>Ruang aman untuk curhat dan menemukan semangat baru</p>
+      </div>
+    </div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
 
@@ -23,7 +23,6 @@
     <div class="close-btn" onclick="toggleMenu()">×</div>
 
     <div class="profile">
-      <!-- FOTO BISA DIGANTI OTOMATIS -->
       <img id="foto-sidebar" src="https://img.icons8.com/ios-filled/100/ffffff/user.png" alt="User Icon" />
       <h3 id="nama-user">Nama Kamu</h3>
       <p id="email-user">namagmailkamu@gmail.com</p>
@@ -37,72 +36,62 @@
     </ul>
   </div>
 
- <main>
-  <div class="menu-container">
+  <!-- MAIN HARUS DITUTUP DI TEMPAT YANG BENAR -->
+  <main>
 
-    <a href="artikel.html" class="menu-btn">
-      <img src="https://img.icons8.com/ios-filled/50/000000/open-book.png" /> Artikel
-    </a>
+    <div class="menu-container">
 
-    <a href="konseling.html" class="menu-btn">
-      <img src="https://img.icons8.com/ios-filled/50/000000/chat.png" /> Konseling
-    </a>
+      <a href="artikel.html" class="menu-btn">
+        <img src="https://img.icons8.com/ios-filled/50/000000/open-book.png" /> 
+        Artikel
+      </a>
 
-    <a href="motivasi.html" class="menu-btn">
-      <img src="https://img.icons8.com/ios-filled/50/000000/books.png" /> Motivasi
-    </a>
+      <a href="konseling.html" class="menu-btn">
+        <img src="https://img.icons8.com/ios-filled/50/000000/chat.png" /> 
+        Konseling
+      </a>
 
-    <a href="jadwalkonseling.html" class="menu-btn">
-      <img src="https://img.icons8.com/ios-filled/50/000000/planner.png" /> Jadwal Konseling
-    </a>
-  </div>
+      <a href="motivasi.html" class="menu-btn">
+        <img src="https://img.icons8.com/ios-filled/50/000000/books.png" /> 
+        Motivasi
+      </a>
 
-  <div class="footer-shape">
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
+      <a href="jadwalkonseling.html" class="menu-btn">
+        <img src="https://img.icons8.com/ios-filled/50/000000/planner.png" /> 
+        Jadwal Konseling
+      </a>
 
-  <!-- SCRIPT UTAMA -->
+    </div>
+
+    <div class="footer-shape">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+  </main>
+
   <script src="Js/script.js"></script>
 
-  <!-- SCRIPT FOTO OTOMATIS -->
   <script>
-    // AMBIL FOTO DARI LOCALSTORAGE
     const foto = localStorage.getItem("fotoProfil");
-    if (foto) {
-      document.getElementById("foto-sidebar").src = foto;
-    }
+    if (foto) document.getElementById("foto-sidebar").src = foto;
 
-    // AMBIL NAMA
     const nama = localStorage.getItem("namaUser");
-    if (nama) {
-      document.getElementById("nama-user").textContent = nama;
-    }
+    if (nama) document.getElementById("nama-user").textContent = nama;
 
-    // AMBIL EMAIL
     const email = localStorage.getItem("emailUser");
-    if (email) {
-      document.getElementById("email-user").textContent = email;
-    }
+    if (email) document.getElementById("email-user").textContent = email;
   </script>
 
-</main>
 </body>
 </html>
-
-
